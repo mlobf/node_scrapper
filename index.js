@@ -6,7 +6,7 @@ const URL = "https://www.imdb.com/title/tt0102926/";
   //const response = await request(URL);
 
   const response = await request({
-    uri: url,
+    uri: URL,
     headers: {
       "User-Agent": "Request-Promise",
     },
