@@ -20,6 +20,13 @@ const URL = "https://www.imdb.com/title/tt0102926/";
 
   let $ = cheerio.load(response);
   let title = $('div[class="sc-94726ce4-1 iNShGo"] > h1').text();
-  let rate = $('span[class="sc-7ab21ed2-1 jGRxWM"]').text();
-  console.log(title, rate);
+  //let rate = $('span[class="sc-7ab21ed2-1 jGRxWM"]').text();
+
+  let rate = $(
+    'div[data-testid="hero-rating-bar__aggregate-rating__score"]'
+  ).text();
+
+  // rate = 8.6/108.6/10
+  console.log(rate);
+  //console.log(title, rate);
 })();
