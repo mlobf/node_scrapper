@@ -1,5 +1,5 @@
 const request = require("request-promise");
-const cheerio = require("cheerio");
+const cheerio = require("cheerio");A
 const URL = "https://www.imdb.com/title/tt0102926/";
 
 (async () => {
@@ -8,12 +8,11 @@ const URL = "https://www.imdb.com/title/tt0102926/";
     headers: {
       Accept:
         "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
-      "Accept-encoding": "gzip, deflate, br",
-      "Accept-language": "en-US,en;q=0.9",
-      "Cache-control": "no-cache",
-      "Upgrade-insecure-requests": "1",
-      "User-agent":
-        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36",
+        "Accept-encoding": "gzip, deflate, br",
+        "Accept-language": "en-US,en;q=0.9",
+        "Cache-control": "no-cache",
+        "Upgrade-insecure-requests": "1",
+        "User-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36",
     },
     gzip: true,
   });
