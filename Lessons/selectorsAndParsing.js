@@ -44,10 +44,32 @@ const URL = "https://www.imdb.com/title/tt0102926/";
 
   let rating = $('div[class="sc-7ab21ed2-3 dPVcnq"]').valueOf().text();
 
-  console.log('==========')
+  let releaseDate = $(
+    'a[class="ipc-link ipc-link--baseAlt ipc-link--inherit-color sc-8c396aa2-1 WIUyh"]'
+  )
+    .text()
+    .trim();
+
+  const arrMovieGender = [];
+
+  let movieGender = $(
+    'li[class="ipc-inline-list__item ipc-chip__text"]'
+  ).text();
+
+  movieGender = movieGender.split(" ")[0];
+
+  console.log("movie gender =====> ", movieGender);
+
+  // ipc-inline-list__item ipc-chip__text
+  // ipc-inline-list__item ipc-chip__text
+  /*
+  console.log("==========");
   console.log("The title ->", title);
   console.log("The rate ->", rate);
   console.log("The Poster ->", poster);
-  console.log('==========')
+  console.log("==========");
   console.log("The rating ->", rating);
+  console.log("==========");
+  console.log("The release Date ->", releaseDate);
+  */
 })();
