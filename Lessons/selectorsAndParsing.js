@@ -50,13 +50,13 @@ const URL = "https://www.imdb.com/title/tt0102926/";
     .text()
     .trim();
 
-  const arrMovieGender = [];
+  let movieGender = $('li[class="ipc-inline-list__item ipc-chip__text"]')
+    .text()
+    .split(" ");
 
-  let movieGender = $(
-    'li[class="ipc-inline-list__item ipc-chip__text"]'
-  ).text();
+  movieGender = movieGender[0].replace(/([A-Z])/g, ",$1").split(",");
 
-  movieGender = movieGender.split(" ")[0];
+  movieGender.shift();
 
   console.log("movie gender =====> ", movieGender);
 
